@@ -18,8 +18,7 @@ const ShowList = () => {
     setShowsData(SingleShow?.show);
 
     const regex = /(<([^>]+)>)/gi;
-    setDescription(showsData?.summary?.replace(regex, ""));
-    console.log(showsData?.summary?.replace(regex, ""));
+    setDescription(SingleShow?.show?.summary?.replace(regex, ""));
   }, [data, id]);
   console.log(showsData);
   useTitle(`Details | ${showsData?.name}`);
